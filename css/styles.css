@@ -21,12 +21,17 @@ body{
   min-height: 150px;
 }
 
-#mainPanel.win,#mainPanel.lwjwin{
+#mainPanel.win,#mainPanel.lwjwin,#mainPanel.meetingwin{
   color:red;
 }
 
 #mainPanel.lwjwin::after{
   content:"選手\A当選おめでとう！";
+  white-space:pre;
+}
+
+#mainPanel.meetingwin::after{
+  content:"\Aプレゼンお願いします！！";
   white-space:pre;
 }
 
