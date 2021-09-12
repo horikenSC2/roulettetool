@@ -113,8 +113,8 @@
   }
 
   function start(){
-    candidatesNode[currentNum].classList.remove('win','lwjwin');
-    mainPanel.classList.remove('win','lwjwin');
+    candidatesNode[currentNum].classList.remove('win','lwjwin','meetingwin');
+    mainPanel.classList.remove('win','lwjwin','meetingwin');
     currentNum=0;
     isRunning=true;
     roulette();
@@ -131,7 +131,10 @@
   }
 
   function winner(){
-    if(selectedMode==="lwj"){
+    if(selectedMode==="meeting"){
+      candidatesNode[currentNum].classList.add('meetingwin');
+      mainPanel.classList.add('meetingwin');
+    }else if(selectedMode==="lwj"){
       candidatesNode[currentNum].classList.add('lwjwin');
       mainPanel.classList.add('lwjwin');
     }else{
